@@ -22,12 +22,12 @@ app.use((req, res, next) => {
   console.log(logs);
   next();
 });
-app.use((req, res, next) => {
-  res.render("maintainance.hbs", {
-    pageTitle: "Maintainance Page",
-    message: "The website is currently under maintainance, come back later!"
-  });
-});
+// app.use((req, res, next) => {
+//   res.render("maintainance.hbs", {
+//     pageTitle: "Maintainance Page",
+//     message: "The website is currently under maintainance, come back later!"
+//   });
+// });
 app.use(express.static(__dirname + "/public"));
 
 hbs.registerHelper("getCurrentYear", () => {
