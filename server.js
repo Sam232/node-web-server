@@ -23,7 +23,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use((req, res, next) => {
-  rex.render("maintainance.hbs", {
+  res.render("maintainance.hbs", {
     pageTitle: "Maintainance Page",
     message: "The website is currently under maintainance, come back later!"
   });
